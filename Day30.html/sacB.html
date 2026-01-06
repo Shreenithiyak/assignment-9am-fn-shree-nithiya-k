@@ -10,31 +10,119 @@ Create an async function that waits for two promises.
 Explain the output of an async function in comments.
 
 1 Write a callback function using setTimeout that prints a message after 3 seconds.
-function(){
-return new promise (resolve,reject)
-settimeout((=>){
-if(true){
-resolve("crt")
-}else{
-reject("err")
-}
-},3000)
-}),
-}
+function getData(){
+        return new promise (resolve,reject)
+            settimeout((=>){
+                if(true){
+                    resolve("crt")
+                }else{
+                    reject("err")
+                }
+            },3000)
+        }),
+    }
 
 2 Convert a callback-based function into a promise.
+function getData(){
+        return new promise ((resolve,reject)=>{
+            settimeout((()=>{
+                if(true){
+                    resolve("crt")
+                },1000);
+             });
+            }
 
+3.Create a promise that resolves after 2 seconds.
+function getData(){
+        return new promise ((resolve,reject)=>{
+            settimeout((()=>{
+                if(true){
+                    resolve("crt")
+                },2000);
+            }else{
+                    reject("err")
+                }
+            });
+        }
 
+4.Handle a rejected promise using .catch().  
+getData()
+    .then((res)=>{
+        console.log(res);
+    }).catch((err)=>{
+        console.log(err);
+    });
 
+5.Rewrite a promise example using async/await.
+async function fetchData(){
+    try{
+        const res = await getData();
+        console.log(res);
+     }catch(err){
+        console.log(err);
+        }
+    }
 
+<-- 6. Use try...catch with async/await -->
+async function fetchData(){
+    try{
+        const res = await getData();
+        console.log(res);
+    }catch(err){
+        console.log(err);
+    }
+}
 
+<!-- 7. Create a function that returns a promise with a random success or failure -->
+function randomPromise(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(Math.random() > 0.5){
+                resolve("Success!");
+            }else{
+                reject("Failed!");
+            }
+        }, 1000);
+    });
+}
 
+<!-- 8. Chain two .then() methods in a promise -->
+randomPromise()
+    .then((res)=>{
+        console.log(res);
+        return res + " First then";
+    })
+    .then((res)=>{
+        console.log(res);
+    })
+    .catch((err)=>{
+        console.log(err);
+    });
 
+<!-- Create an async function that waits for two promises.
+  function task1(){
+    return new promise(resolve =>{
+       settimeout(()=> resolve("Task1 done"),1000};
+});
+}
+  function task2(){
+    return new promise(resolve =>{
+       settimeout(()=> resolve("Task2 done"),1000};
+});
+}
+aync function runtask(){
+   const results=await promise.all([task1(),task2()]);
+   console.log(results);
+   }
 
-
-
-
-
+Explain the output of an async function in comments. -->
+async function always return promises,& results consumed using (await) or (then) 
+using these keywords we can handle asynchronous operations more easily.
+difference between
+normal func                             async func
+  =>returns value                      =>returns promise
+  =>immediate execution                =>execution paused at await
+  => direct use                        =>future value
 
 
 
