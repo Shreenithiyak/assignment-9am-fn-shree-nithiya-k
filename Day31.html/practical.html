@@ -5,16 +5,50 @@ Fetch API error handling
 Store cart items using JSON + localStorage -->
 
 
-<!-- Fetch and display user list
+<!-- Fetch and display user list 
     using this url:
     fetch('https://jsonplaceholder.typicode.com/users')
     
-    Save login status in localStorage
-    
+Save login status in localStorage
+function login(){
+     locatStorage.setItem("isloggedIn","true");
+     alert("login success");
+}
+function logot(){
+     locatStorage.removeItem("isloggedIn",);
+     alert("logged out");
+}
+ console.log(login()/logot());
+  
+Theme switcher using storage
+function setTheme(theme){
+     localStorage.setItem("theme",theme);
+     document.body.className=theme;
+}
+function loadTheme(){
+     const theme=localStorage.getItem("theme")||"light";
+     document.body.className=theme;
+}
+     
+Fetch API error handling
+fetch('https://jsonplaceholder.typicode.com/invalid-endpoint')
+.then(response=>{
+     if(!response.ok){
+          throw new Error("Network response was not ok");
+     }
+     return response.json();
+})
+.catch(error=>{
+     console.error("There has been a problem with your fetch operation:",error);
+});
 
-
-
-
+Store cart items using JSON + localStorage
+function addToCart(item){
+     let cart=JSON.parse(localStorage.getItem("cart"))||[];
+     cart.push(item);
+     localStorage.setItem("cart",JSON.stringify(cart));
+}
+ 
 
 
 
