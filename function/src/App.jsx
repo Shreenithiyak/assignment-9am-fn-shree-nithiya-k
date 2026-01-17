@@ -1,3 +1,16 @@
+{/* Define a React component
+       A React component is just a function that shows something on the screen.
+       real-life example:TV remote = same button can be used many times. */}
+
+      {/* Props explanation:
+          - Props are arguments passed to components (like function parameters)
+          - Props are read-only because React enforces unidirectional data flow
+          - Modifying props directly would cause unpredictable behavior and bugs
+          - Use state (useState) if you need to update values instead
+      */}
+    
+
+
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -9,12 +22,21 @@ function Greeting({ name, age }) {
       <p>I'M {name}</p>
       <p>I was {age} years old</p>
     </div>
-  )
+  );
+}
+
+function Card() {
+  return (
+    <div style={{boder:"1px solid blue",width:"200px", padding:"10px", margin:"10px"}}>
+      <h2>profile Card</h2>
+      <h3> Shree Nithiya.k</h3>
+      <p>Frontend Developer</p>
+    </div>
+  );
 }
 
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
@@ -27,19 +49,13 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <h2><Greeting name="Shree Nithya.k" age={20} /></h2>
-     
-     {/* Define a React component
-       A React component is just a function that shows something on the screen.
-       real-life example:TV remote = same button can be used many times. */}
 
-      {/* Props explanation:
-          - Props are arguments passed to components (like function parameters)
-          - Props are read-only because React enforces unidirectional data flow
-          - Modifying props directly would cause unpredictable behavior and bugs
-          - Use state (useState) if you need to update values instead
-      */}
+
+      <Card />       
+  
+     
     </>
-  )
+  );
 }
 
 export default App
