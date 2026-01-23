@@ -2,14 +2,15 @@
        A React component is just a function that shows something on the screen.
        real-life example:TV remote = same button can be used many times. */}
 
-      {/* Props explanation:
+{/* Props explanation:
           - Props are arguments passed to components (like function parameters)
           - Props are read-only because React enforces unidirectional data flow
           - Modifying props directly would cause unpredictable behavior and bugs
           - Use state (useState) if you need to update values instead
       */}
-    
-
+//  Explain what state is   
+    // State is data that can change over time
+    // EXAMPLE :Likes = Number
 
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -25,16 +26,26 @@ function Greeting({ name, age }) {
   );
 }
 
-function Card() {
+function Card({children}) {
   return (
-    <div style={{boder:"1px solid blue",width:"200px", padding:"10px", margin:"10px"}}>
-      <h2>profile Card</h2>
-      <h3> Shree Nithiya.k</h3>
-      <p>Frontend Developer</p>
-    </div>
+    <Card style={{boder:"1px solid blue",width:"200px", padding:"10px", margin:"10px"}}>
+     {children}
+    </Card>
   );
 }
 
+function BlogPost(){
+  return(
+    <div>
+      <BlogTitle />
+      <BlogContent />
+      <BlogAuthor />
+    </div>
+  );
+}
+function Button(){
+  return <button>Click</button>;
+} 
 function App() {
   const [count, setCount] = useState(0)
   return (
@@ -51,9 +62,14 @@ function App() {
       <h2><Greeting name="Shree Nithya.k" age={20} /></h2>
 
 
-      <Card />       
+      <Card>
+      <h2>profile Card</h2>
+      <h3>Teach Learner</h3>
+      <p>Frontend Developer</p>
+      </Card>
+       <Button />      
   
-     
+  
     </>
   );
 }
@@ -68,9 +84,14 @@ export default App
 // Identify props and children in a given code
 // Explain why props are read-only
 
-
 // Profile card using props (name, role)
 // Product list component with price props
 // Card component using children
 // Blog post layout using nested components
 // Simple dashboard layout using reusable components
+
+// Explain what state is
+// Create a counter using useState
+// Handle button click event
+// Capture input value using state
+// Toggle text visibility
