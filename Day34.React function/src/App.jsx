@@ -12,11 +12,18 @@
     // State is data that can change over time
     // EXAMPLE :Likes = Number
 
-import { useState } from 'react'
+//Capture input value using state{already we used}
+//User types something//React stores it in state//State remembers the value
+
+import { use, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Login from './login.jsx';
 
+function Login(){
+  return<Login />;
+}
 function Greeting({ name, age }) {
   return (
     <div>
@@ -48,6 +55,7 @@ function Button(){
 } 
 function App() {
   const [count, setCount] = useState(0)
+
   return (
     <>
       <div>
@@ -57,10 +65,16 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
+      
+       <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count} 
+        </button>
+        <button onClick={() => setCount(0)}>Reset</button>
+        </div>
       <h1>Vite + React</h1>
       <h2><Greeting name="Shree Nithya.k" age={20} /></h2>
-
+      </div>
 
       <Card>
       <h2>profile Card</h2>
@@ -68,13 +82,26 @@ function App() {
       <p>Frontend Developer</p>
       </Card>
        <Button />      
-  
-  
+      <ToggleText />
     </>
   );
 }
-
-export default App
+function ToggleText(){
+  const[name,setname]=useState("")
+  const[showText,setShowText]=useState(false);
+  function handleClick(){
+    setShowText(!showText);
+  }
+  return(
+    <div>
+      <input type="text" onChange={(e)=>setname(e.target.value)} />
+      <p>Your name is:{name}</p>
+      <button onClick={handleClick}>Toggle Text</button>
+      {showText && <p>This is the text to show or hide.</p>}
+    </div>
+  );
+}
+export default App;
 
 
 
@@ -87,11 +114,15 @@ export default App
 // Profile card using props (name, role)
 // Product list component with price props
 // Card component using children
-// Blog post layout using nested components
-// Simple dashboard layout using reusable components
+1// Blog post layout using nested components
+2// Simple dashboard layout using reusable components
 
 // Explain what state is
 // Create a counter using useState
 // Handle button click event
 // Capture input value using state
 // Toggle text visibility
+
+//Counter app with reset button
+//Light ON/OFF switch
+
