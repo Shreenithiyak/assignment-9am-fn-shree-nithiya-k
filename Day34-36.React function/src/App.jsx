@@ -23,7 +23,7 @@ import Authentication from "./components/Authentication.jsx";
 import NumberList from "./components/NumberList.jsx";
 import Login from "./components/Login.jsx";
 import User from "./components/User.jsx";
-import Product from "./components/product.jsx";
+import Product from "./components/product.js";
 
 /* Greeting Component */
 function Greeting({ name, age }) {
