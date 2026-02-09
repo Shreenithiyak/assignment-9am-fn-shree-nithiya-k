@@ -8,6 +8,7 @@ import RegistrationForm from "./components/RegistrationForm";
 import FeedbackForm from "./components/FeedbackForm";
 import LivePreviewForm from "./components/LivePreviewForm";
 import ValidationForm from "./components/ValidationForm";
+import CounterLogger from './components/CounterLogger';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <FeedbackForm />
       <LivePreviewForm />
       <ValidationForm />
+      <CounterLogger />
+ 
     </div>
   );
 }

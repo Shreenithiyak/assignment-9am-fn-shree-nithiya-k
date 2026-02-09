@@ -1,0 +1,16 @@
+// Define Database?
+// A database is an organized collection of data stored in a structured way so it can be easily accessed, managed, and updated.
+//  trick:
+// Database = Digital cupboard for data
+
+// Difference Between Data & Database
+// Data	                                  Database
+// Raw facts or information           	Organized collection of data
+// Example: "Ravi", 22, Chennai	        Table storing many people’s details
+// Small piece                       	Big system
+// Not structured alone             	Structured & managed
+
+// trick: Data is ingredient → Database is Briyani pot
+
+
+
