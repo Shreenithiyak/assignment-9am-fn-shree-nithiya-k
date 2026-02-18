@@ -1,0 +1,45 @@
+What is JavaScript?
+// Programming language for web interactions (buttons,forms,sliders,)
+
+What are variables?
+variable is like container to store data 
+
+Difference between var, let, const?
+var=     can be hoisted output=(undefined)              Old version, avoid using
+const =  can't assces before hoisting                   Constant (never change)
+let=     can't assces before hoisting                   Later change allowed
+
+What is datatype?
+A data type tells JavaScript what kind of value a variable is holding.
+
+Types of primitive datatypes?
+String,number,boolean,undefined,null,bignit,symbol-these are the seven types of primitive datatypes
+
+What are non-primitive datatypes?
+object,array,fuction-these are the three types of non-primitive
+
+What are operators?
+operators are the symbols to perform logical actions
+
+Types of operators?
+--Arithmetic operator
+--Comparison operator
+--Logical operator
+--Assignment operator
+--Increment operator
+
+What is expression?
+
+What is statement?
+
+What is control statement?
+
+What are conditional statements?
+
+What are looping statements?
+
+What is hoisting?
+
+What is scope?
+
+What is closure?
