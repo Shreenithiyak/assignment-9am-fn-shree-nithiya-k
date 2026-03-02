@@ -2,12 +2,12 @@ What is JavaScript?
 // Programming language for web interactions (buttons,forms,sliders,)
 
 What are variables?
-variable is like container to store data 
+variable is like container to store data
 
 Difference between var, let, const?
-var=     can be hoisted output=(undefined)              Old version, avoid using
-const =  can't assces before hoisting                   Constant (never change)
-let=     can't assces before hoisting                   Later change allowed
+var= can be hoisted output=(undefined) Old version, avoid using
+const = can't assces before hoisting Constant (never change)
+let= can't assces before hoisting Later change allowed
 
 What is datatype?
 A data type tells JavaScript what kind of value a variable is holding.
@@ -43,3 +43,68 @@ What is hoisting?
 What is scope?
 
 What is closure?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
